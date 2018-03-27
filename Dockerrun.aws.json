@@ -17,7 +17,7 @@
   "containerDefinitions": [
     {
       "name": "my-app",
-      "image": "php:fpm",
+      "build": "./my-app",
       "essential": true,
       "memory": 128,
       "mountPoints": [

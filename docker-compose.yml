@@ -1,0 +1,21 @@
+version: '2'
+services:
+
+  my-app:
+    build: ./my-app      
+    image: "my-app"
+    volumes:
+     - ./my-app:/var/www/html
+
+  nginx:
+    image: nginx
+    ports:
+     - "80:80"
+    volumes_from: 
+     - my-app 
+    volumes:
+     - ./proxy/conf.d:/etc/nginx/conf.d
+    depends_on:
+     - my-app
+    links:
+     - my-app   
