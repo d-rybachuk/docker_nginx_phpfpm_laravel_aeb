@@ -3,7 +3,7 @@ services:
 
   my-app:
     build: ./my-app      
-    image: "my-app"
+    image: "dmitriyr/docker_nginx_phpfpm_laravel_aeb"
     volumes:
      - ./my-app:/var/www/html
 
