@@ -17,13 +17,9 @@
   "containerDefinitions": [
     {
       "name": "my-app",
-      "image": "php:fpm",
+      "image": "dmitriyr/docker_nginx_phpfpm_laravel_aeb",
       "essential": true,
       "memory": 128,
-      "command": [
-        "/bin/bash",
-        "/var/www/html/run-prod.sh"
-      ],
       "mountPoints": [
         {
           "sourceVolume": "my-app",
