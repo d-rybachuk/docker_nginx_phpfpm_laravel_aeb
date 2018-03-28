@@ -12,7 +12,7 @@
       "host": {
         "sourcePath": "/var/app/current/proxy/conf.d"
       }
-    }  
+    }
   ],
   "containerDefinitions": [
     {
@@ -20,11 +20,14 @@
       "image": "php:fpm",
       "essential": true,
       "memory": 128,
+      "command": [
+        "/bin/bash",
+        "/var/www/html/run-prod.sh"
+      ],
       "mountPoints": [
         {
           "sourceVolume": "my-app",
-          "containerPath": "/var/www/html",
-          "readOnly": true
+          "containerPath": "/var/www/html"
         }
       ]
     },
@@ -45,8 +48,7 @@
       "mountPoints": [
         {
           "sourceVolume": "my-app",
-          "containerPath": "/var/www/html",
-          "readOnly": true
+          "containerPath": "/var/www/html"
         },
         {
           "sourceVolume": "awseb-logs-nginx-proxy",
