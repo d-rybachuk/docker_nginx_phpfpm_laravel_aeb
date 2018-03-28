@@ -28,5 +28,10 @@ Push your docker container to repository
 docker push dmitriyr/docker_nginx_phpfpm_laravel_aeb
 ```
 
-Create New Environment with Multi-container Docker. 
-upload release from repo/
+make zip from inside docker_nginx_phpfpm_laravel_aeb folder (there is issue with .zip from github release folder, not sutable for uploading to Amazon EB )
+```
+zip -r docker_nginx_phpfpm_laravel_aeb.zip Dockerrun.aws.json  my-app  proxy  README.md 
+```
+
+Create New Environment with Multi-container Docker and upload your docker_nginx_phpfpm_laravel_aeb
+
