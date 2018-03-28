@@ -4,6 +4,7 @@ cd docker_nginx_phpfpm_laravel_aeb
 
 ### File structure
 
+```
 .
 ├── my-app (Laravel demo inside)
 |   └── Dockerfile
@@ -12,7 +13,7 @@ cd docker_nginx_phpfpm_laravel_aeb
 │       └── default.conf
 ├── Dockerrun.aws.json
 └── README.md
-
+```
 
 ### Development
 ```
