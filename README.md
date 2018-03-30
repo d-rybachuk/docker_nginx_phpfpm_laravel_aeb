@@ -1,6 +1,5 @@
-clone as docker_nginx_phpfpm_laravel_aeb
+### Docker + Nginx + php-fpm + deploy on Amazon Elastic Beanstalk
 
-cd docker_nginx_phpfpm_laravel_aeb
 
 ### File structure
 
@@ -16,6 +15,11 @@ cd docker_nginx_phpfpm_laravel_aeb
 ```
 
 ### Development
+
+clone this repo as docker_nginx_phpfpm_laravel_aeb
+
+cd docker_nginx_phpfpm_laravel_aeb
+
 ```
 docker-compose up -d
 ```
@@ -23,7 +27,13 @@ docker-compose up -d
 View laravel demo http://localhost/
 
 ### Deploy to Elastic Beanstalk
-Push your docker container to repository
+Push your docker container to docker repository (in this example i used https://hub.docker.com/ and my repo dmitriyr)
+
+For pushing you should docker login first
+```
+docker login dmitriyr
+```
+
 ```
 docker push dmitriyr/docker_nginx_phpfpm_laravel_aeb
 ```
@@ -34,4 +44,5 @@ zip -r docker_nginx_phpfpm_laravel_aeb.zip Dockerrun.aws.json  my-app  proxy  RE
 ```
 
 Create New Environment with Multi-container Docker and upload your docker_nginx_phpfpm_laravel_aeb
+
 
